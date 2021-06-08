@@ -4,10 +4,10 @@ import java.util.List;
 
 import kodlamaio.hrms.core.utilities.results.DataResult;
 import kodlamaio.hrms.core.utilities.results.Result;
-import kodlamaio.hrms.entities.concretes.Job;
+import kodlamaio.hrms.entities.concretes.Candidate;
 
-public interface JobService {
+public interface CandidateService {
 	
-	DataResult<List<Job>> getAll();
-	Result add(Job job);
+	DataResult<List<Candidate>> getAll();
+	Result add(Candidate candidate);
 }
