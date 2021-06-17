@@ -8,8 +8,9 @@ import kodlamaio.hrms.entities.concretes.Employer;
 
 public interface EmployerService {
 	DataResult<List<Employer>> getAll();
-	DataResult<Employer> getByEmail(String email);
-	boolean employerIsValid(Employer employer);
+	Result isEmailValid(String email);
+	Result isDomainValid(String email,String webAddress);
+	Result isEmployerValid(Employer employer);
 	Result add(Employer employer);
 	
 }

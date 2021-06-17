@@ -9,5 +9,8 @@ import kodlamaio.hrms.entities.concretes.Candidate;
 public interface CandidateService {
 	
 	DataResult<List<Candidate>> getAll();
+	Result isEmailValid(String email);
+	Result isIdentityNumberValid(String identityNumber);
+	Result isCandidateValid(Candidate candidate);
 	Result add(Candidate candidate);
 }

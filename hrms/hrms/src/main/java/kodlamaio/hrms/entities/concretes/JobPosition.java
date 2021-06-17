@@ -1,18 +1,25 @@
 package kodlamaio.hrms.entities.concretes;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name="job_titles")
-public class Job {
+public class JobPosition {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,15 +27,9 @@ public class Job {
 	private int id;
 	
 	@Column(name="job_title")
-	private String title;
+	private String jobTitle;
 
-	public Job() {
-		
-	}
+	@OneToMany(mappedBy = "jobPosition")
+	private List<JobAdvertisement> jobAdvertisements;
 	
-	public Job(int id, String title) {
-		super();
-		this.id = id;
-		this.title = title;
-	}
 }
