@@ -39,7 +39,7 @@ public class jobAdvertisementsController {
 		return this.jobAdvertisementService.add(jobAdvertisement);
 	}
 	
-	
+	/*
 	@GetMapping("/getByActivated")
 	public DataResult<List<JobAdvertisement>> getByActivated() {
 		return this.jobAdvertisementService.getByActivated();
@@ -53,13 +53,13 @@ public class jobAdvertisementsController {
 	
 	
 	@GetMapping("/getByActivatedAndEmployerId")
-	public DataResult<List<JobAdvertisement>> getByActivatedAndEmployerId(@RequestParam int employerId) {
+	public DataResult<JobAdvertisement> getByActivatedAndEmployerId(@RequestParam int employerId) {
 		return this.jobAdvertisementService.getByActivatedAndEmployerId(employerId);
 	}
 	
 	
 	@GetMapping("/getByActivatedAndEmployerName")
-	public DataResult<List<JobAdvertisement>> getByActivatedAndEmployerName(@RequestParam String employerName) {
+	public DataResult<JobAdvertisement> getByActivatedAndEmployerName(@RequestParam String employerName) {
 		return this.jobAdvertisementService.getByActivatedAndEmployerName(employerName);
 	}
 	
@@ -68,7 +68,7 @@ public class jobAdvertisementsController {
 	public DataResult<List<JobAdvertisement>> getByActivatedAndSortedCreatedDateDesc() {
 		return this.jobAdvertisementService.getByActivatedAndSortedCreatedDateDesc();
 	}
-	
+	*/
 	
 	
 	

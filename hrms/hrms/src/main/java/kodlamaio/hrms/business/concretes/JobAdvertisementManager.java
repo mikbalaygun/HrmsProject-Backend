@@ -34,7 +34,7 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 	}
 
 	
-	
+	/*
 	@Override
 	public DataResult<List<JobAdvertisement>> getByActivated() {
 	
@@ -51,29 +51,29 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 
 	
 	@Override
-	public DataResult<List<JobAdvertisement>> getByActivatedAndEmployerId(int employerId) {
+	public DataResult<JobAdvertisement> getByActivatedAndEmployerId(int employerId) {
 		
-		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getByIsActivatedAndEmployer_EmployerId(true, employerId));
+		return new SuccessDataResult<JobAdvertisement>(this.jobAdvertisementDao.getByIsActivatedAndEmployer_EmployerId(true, employerId));
 	}
 
 
 
 
 	@Override
-	public DataResult<List<JobAdvertisement>> getByActivatedAndEmployerName(String employerName) {
+	public DataResult<JobAdvertisement> getByActivatedAndEmployerName(String employerName) {
 		
-		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getByIsActivatedAndEmployerName(true, employerName));
+		return new SuccessDataResult<JobAdvertisement>(this.jobAdvertisementDao.getByIsActivatedAndEmployerName(true, employerName));
 	}
 	
 	
-	
+
 	@Override
 	public DataResult<List<JobAdvertisement>> getByActivatedAndSortedCreatedDateDesc() {
 		
 		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getByIsActiveOrderByCreatedDateDesc(true),"Activated Advertisements sorted by created date.");
 	}
 
-	
+	*/
 	
 	@Override
 	public Result add(JobAdvertisement jobAdvertisement) {
